@@ -15,7 +15,7 @@
 >
 > 3. **checkHostAppName() in extension.js**: Find the function `checkHostAppName(){return["Visual Studio Code","Visual Studio Code - Insiders","Visual Studio Code - Exploration"].includes(r.env.appName)}` and replace it with `checkHostAppName(){return true}`.
 >
-> 4. **GitHub Authentication Client ID**: Antigravity IDE uses its own GitHub OAuth Client ID (`Ov23liqK7zUW1cAPleVE`) but Live Share's backend expects the official VS Code Client ID. Find `C:\Users\ojasmahajan\AppData\Local\Programs\Antigravity IDE\resources\app\extensions\github-authentication\dist\extension.js`, search for `Ov23liqK7zUW1cAPleVE` and replace it with `01ab8ac9400c4e429b23`.
+> 4. **GitHub Authentication Client ID**: Antigravity IDE uses its own GitHub OAuth Client ID (`Ov23liqK7zUW1cAPleVE`) but Live Share's backend expects the official VS Code Client ID. Find `%LOCALAPPDATA%\Programs\Antigravity IDE\resources\app\extensions\github-authentication\dist\extension.js`, search for `Ov23liqK7zUW1cAPleVE` and replace it with `01ab8ac9400c4e429b23`.
 >
 > After patching, fully restart Antigravity IDE, then sign out of GitHub in the IDE and sign back in to refresh the token.
 
